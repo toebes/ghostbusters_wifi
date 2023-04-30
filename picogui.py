@@ -209,12 +209,12 @@ class Listbox():
         if screen_items >= no_of_items:
             screen_items = no_of_items
             self.topitem = 0
-        print(f'Selected={self.selected} Top={self.topitem} Screen_items={screen_items} no_of_items={no_of_items}')
+        #print(f'Selected={self.selected} Top={self.topitem} Screen_items={screen_items} no_of_items={no_of_items}')
 
         for line in range(0, screen_items):
             offy = self.y +(line*self.item_height)
             entry = line+self.topitem
-            print(f'Line {line} X:{self.x} Y:{offy} Text:{self.data[entry]}')
+            #print(f'Line {line} X:{self.x} Y:{offy} Text:{self.data[entry]}')
             if entry == self.selected:
                 display.set_pen(self.picogui.highlightpen)
                 display.rectangle(self.x, offy, self.width, self.item_height)
@@ -237,7 +237,7 @@ class Listbox():
         if self.selected < len(self.data)-1:
             self.selected += 1
         self.draw()
-        print(f'down button pressed, selected item = {self.selected}')
+        #print(f'down button pressed, selected item = {self.selected}')
 
     def up(self):
         if self.selected == 0:
@@ -247,7 +247,7 @@ class Listbox():
         if self.selected > 0:
             self.selected -= 1 
         self.draw()
-        print(f'up button pressed, selected item = {self.selected}')
+        #print(f'up button pressed, selected item = {self.selected}')
 
 def ChooseItem(picogui, data, initial=0, renderfunc = None):
     inset = 0

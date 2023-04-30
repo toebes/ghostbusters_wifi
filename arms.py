@@ -16,14 +16,17 @@ class Arms:
         self.s.disable()
     
     def open_arms(self):
+        #print(f'Open Arms to{self.open_value}')
         self.__percent = self.open_value
         self.s.to_percent(self.open_value)
         
     def close_arms(self):
+        #print(f'Close Arms to{self.closed_value}')
         self.__percent = self.closed_value
         self.s.to_percent(self.closed_value)
         
     def to_percent(self, percent):
+        #print(f'Arms to{percent}')
         self.__percent = percent
         self.s.to_percent(percent)
         
